@@ -1,5 +1,6 @@
 html {
   font-family: 'Lato', sans-serif;
+
 }
 
 body {
@@ -14,37 +15,65 @@ margin: 0;
 
 #J1 {
   background-color: rgb(255, 255, 255) ;
-  flex: 2;
-
 }
 
-#J2 {
+#J2 {  
   background-color: rgba(230, 227, 227, 0.623);
+}
+
+#J1, #J2 {  
+  position: relative;
   flex: 2;
 }
+
+#score {
+  position: absolute;
+  top: 20%;
+  left: 180px;
+  height: 300px;
+  width: 300px;
+  border: solid black 1px;
+}
+
+#essai {
+  position: absolute;
+  top: 70%;
+  left: 255px;
+  height: 150px;
+  width: 150px;
+  background-color: brown;
+}
+
 
 #Dé {
+  position: relative;
   background-color: rgba(243, 243, 243, 0.767);
   flex: 1;
 }
 
-/* For mobile phones: */
-[class*="col-"] {
-  width: 100%;
+h1, h2 {
+  text-align: center;
 }
 
-@media only screen and (min-width: 768px) {
-  /* For desktop: */
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
+#new, #roll, #hold{
+  height: 25px;
+  width: 175px;
+  position: absolute;
+  left: 75px;
+  padding: 20px;
+  border:none;
+}
+
+#new {
+  top: 10%;
+  
+}
+
+#roll {
+  top: 75%;
+  
+}
+
+#hold {
+  top: 85%;
 }
