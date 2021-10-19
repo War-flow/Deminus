@@ -55,7 +55,7 @@ h1, h2 {
   text-align: center;
 }
 
-.btn {
+.btn, #DD {
   height: auto;
   position: absolute;
   font-size: 18px;
@@ -66,6 +66,16 @@ h1, h2 {
   width: auto;
   left: 65px;
   border: none;
+}
+
+#DD {
+  top: 25%;
+  left: 75px;
+}
+
+#DD > img {
+  height: 175px;
+  width: 175px;
 }
 
 #roll {
