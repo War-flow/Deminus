@@ -41,7 +41,7 @@ margin: 0;
   left: 255px;
   height: 150px;
   width: 150px;
-  background-color: brown;
+  background-color: rgba(165, 42, 42, 0.815);
 }
 
 
@@ -55,25 +55,40 @@ h1, h2 {
   text-align: center;
 }
 
-#new, #roll, #hold{
-  height: 25px;
-  width: 175px;
+.btn {
+  height: auto;
   position: absolute;
-  left: 75px;
-  padding: 20px;
-  border:none;
+  font-size: 18px;
 }
 
 #new {
   top: 10%;
-  
+  width: auto;
+  left: 65px;
+  border: none;
 }
 
 #roll {
   top: 75%;
-  
+  width: auto;
+  left: 100px;
+  border: none;
 }
 
 #hold {
   top: 85%;
+  width: auto;
+  left: 100px;
+  border: none;
+}
+
+i {
+  font-size: 30px;
+  color: red;
+}
+
+#new:hover, #roll:hover, #hold:hover {
+  background-color: rgb(201, 211, 221);
+  color: black;
+  border: black solid 1px;
 }
