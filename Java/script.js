@@ -1,35 +1,41 @@
 $(() => {
 
-  let RR = 0
+  var round = 0;
 
-  $('#roll').click(function () {
-    Math.floor(Math.random() * 6) + 1;
-  })
+  $('#roll').click(function() {
 
-  let RR = 0
+    let roll = Math.floor(Math.random() * 6) + 1;
 
-  switch (RR) {
-    case 1:
-      $('#DD').html('<img src="../Images/dé n°1.png" alt="Dé">');
-      break;
-    case 2:
-      $('#DD').html('<img src="../Images/dé n°2.png" alt="Dé">');
-      break;
-    case 3:
-      $('#DD').html('<img src="../Images/dé n°3.png" alt="Dé">');
-      break;
-    case 4:
-      $('#DD').html('<img src="../Images/dé n°4.png" alt="Dé">');
-      break;
-    case 5:
-      $('#DD').html('<img src="../Images/dé n°5.png" alt="Dé">');
-      break;
-    case 6:
-      $('#DD').html('<img src="../Images/dé n°6.png" alt="Dé">');
-      break;
+    switch (roll) {
+      case 1:
+        $('#DD').html('<img src="../Images/dé n°1.png" alt="Dé">');
+        round = 0
+        break;
+      case 2:
+        $('#DD').html('<img src="../Images/dé n°2.png" alt="Dé">');
+        round += 2
+        break;
+      case 3:
+        $('#DD').html('<img src="../Images/dé n°3.png" alt="Dé">');
+        round += 3
+        break;
+      case 4:
+        $('#DD').html('<img src="../Images/dé n°4.png" alt="Dé">');
+        round += 4
+        break;
+      case 5:
+       $('#DD').html('<img src="../Images/dé n°5.png" alt="Dé">');
+       round += 5
+        break;
+      case 6:
+        $('#DD').html('<img src="../Images/dé n°6.png" alt="Dé">');
+        round += 6
+        break;
       default:
         $('#DD').html('<img src="../Images/dé n°1.png" alt="Dé">');
-  }
+    }
+  
+  $('#Round').text(round)
 
-
+  })
 })

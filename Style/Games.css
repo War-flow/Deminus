@@ -26,7 +26,7 @@ margin: 0;
   flex: 2;
 }
 
-#score {
+#score1, #score2 {
   position: absolute;
   top: 20%;
   left: 180px;
@@ -35,13 +35,14 @@ margin: 0;
   border: solid black 1px;
 }
 
-#essai {
+#essai1, #essai2 {
   position: absolute;
   top: 70%;
   left: 255px;
-  height: 150px;
-  width: 150px;
-  background-color: rgba(165, 42, 42, 0.815);
+  height: 100px;
+  width: 125px;
+  background-color: rgb(243, 31, 31);
+  color: aliceblue;
 }
 
 
@@ -51,7 +52,7 @@ margin: 0;
   flex: 1;
 }
 
-h1, h2 {
+h1, h2, #Round {
   text-align: center;
 }
 
@@ -101,4 +102,8 @@ i {
   background-color: rgb(201, 211, 221);
   color: black;
   border: black solid 1px;
+}
+
+#Round {
+  font-size: 30px;
 }
