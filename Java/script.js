@@ -2,6 +2,8 @@ $(() => {
 
   var round = 0;
 
+  var global = 0;
+
   $('#roll').click(function() {
 
     let roll = Math.floor(Math.random() * 6) + 1;
@@ -34,8 +36,15 @@ $(() => {
       default:
         $('#DD').html('<img src="../Images/dé n°1.png" alt="Dé">');
     }
-  
-  $('#Round').text(round)
-
+  $('#round').text(round)
   })
+
+  $('#hold').click(function() {
+    global += round 
+    $('#global').text(global)
+    ù
+    $('#round').text(0)
+    round = 0
+  })
+
 })
