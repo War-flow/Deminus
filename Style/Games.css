@@ -115,7 +115,7 @@ i {
   color: rgb(243, 31, 31);
 }
 
-.player {
+#player1, #player2 {
   position: absolute;
   top:25%;
   left: 230px;

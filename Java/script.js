@@ -1,24 +1,47 @@
 $(() => {
 
   $( "#new" ).click(function() {
-    $('#global1').empty();
-    $('#global2').empty();
-    $('#round1').empty();
-    $('#round2').empty();
+
+    global1 = 0;
+
+    round1 = 0;
+
+    global2 = 0;
+
+    round2 = 0;
+
+    let player1 = true;
+
+    $('#global1').text(global1)
+
+    $('#round1').text(0)
+    
+    $('#global2').text(global2)
+  
+    $('#round2').text(0)
+
+    if (player1) {
+      $('#player1').css('background-color','yellow');
+      $('#player2').css('background-color','white');
+    }else {
+      $('#player2').css('background-color','yellow');
+      $('#player1').css('background-color','white');
+    }
+    
 })
 
-  var round1 = 0;
+  let round1 = 0;
 
-  var round2 = 0;
+  let round2 = 0;
 
-  var global1 = 0;
+  let global1 = 0;
 
-  var global2 = 0;
+  let global2 = 0;
 
-  var player1 = true;
+  let player1 = true;
 
   $('#hold').click(function() {
-
+    
     if (player1) {
       global1 += round1
       $('#global1').text(global1)
@@ -35,9 +58,16 @@ $(() => {
     player1 = !player1
 
     if (global1 >= 100) {
-      alert('VICTOIRE DU JOUEUR 1')
+      alert(`VICTOIRE DU JOUEUR 2 avec ${global1}`)
     } else if (global2 >= 100){
-      alert('VICTOIRE DU JOUEUR 2')
+      alert(`VICTOIRE DU JOUEUR 2 avec ${global2}`)
+    }
+    if (player1) {
+      $('#player1').css('background-color','yellow');
+      $('#player2').css('background-color','white');
+    }else {
+      $('#player2').css('background-color','yellow');
+      $('#player1').css('background-color','white');
     }
   })
 
@@ -51,6 +81,13 @@ $(() => {
           $('#DD').html('<img src="../Images/dé n°1.png" alt="Dé">');
           round1 = 0
           player1 = !player1
+          if (player1) {
+            $('#player1').css('background-color','yellow');
+            $('#player2').css('background-color','white');
+          }else {
+            $('#player2').css('background-color','yellow');
+            $('#player1').css('background-color','white');
+          }
           break;
         case 2:
           $('#DD').html('<img src="../Images/dé n°2.png" alt="Dé">');
@@ -81,8 +118,15 @@ $(() => {
       switch (roll) {
         case 1:
           $('#DD').html('<img src="../Images/dé n°1.png" alt="Dé">');
-          player1 = !player1
           round2 = 0
+          player1 = !player1
+          if (player1) {
+            $('#player1').css('background-color','yellow');
+            $('#player2').css('background-color','white');
+          }else {
+            $('#player2').css('background-color','yellow');
+            $('#player1').css('background-color','white');
+          }
           break;
         case 2:
           $('#DD').html('<img src="../Images/dé n°2.png" alt="Dé">');
@@ -109,5 +153,6 @@ $(() => {
       }
     $('#round2').text(round2)
     }
+    
   })
 })
